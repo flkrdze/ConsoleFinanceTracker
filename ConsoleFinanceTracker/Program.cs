@@ -200,7 +200,7 @@ namespace ConsoleFinanceTracker
             Console.WriteLine($"Max: {max:C2}");
             Console.WriteLine($"Min: {min:C2}");
 
-            Console.WriteLine("\nПо категориям:");
+            Console.WriteLine("\nBy category:");
             var byCategory = transactions
                 .GroupBy(t => t.Category)
                 .Select(g => new { Category = g.Key, Total = g.Sum(t => t.Amount), Count = g.Count() })
